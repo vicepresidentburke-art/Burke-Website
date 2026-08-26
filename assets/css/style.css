@@ -1,0 +1,532 @@
+/* =========================================================================
+   The Edmund Burke Literary and Debating Society — stylesheet
+   -------------------------------------------------------------------------
+   New to editing this? Look for the "EDIT ME" comments in the HTML files
+   for text changes. This file controls colors, fonts, and layout — you
+   generally won't need to touch it unless you want to change the look.
+   ========================================================================= */
+
+:root {
+  --black: #0b0b0c;
+  --near-black: #17181a;
+  --white: #ffffff;
+  --off-white: #f6f5f2;
+  --line: #23262b;
+  --line-light: #e2e0da;
+  --navy: #16244a;
+  --navy-light: #2c4272;
+  --gray: #5c5c5c;
+
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-ui: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --max-width: 1080px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--off-white);
+  color: var(--near-black);
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--navy);
+}
+
+a:hover {
+  color: var(--navy-light);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 0.5em;
+  color: var(--black);
+}
+
+h1 { font-size: clamp(2.4rem, 5vw, 3.6rem); }
+h2 { font-size: clamp(1.8rem, 3.2vw, 2.4rem); }
+h3 { font-size: 1.35rem; }
+
+p { margin: 0 0 1.2em; }
+
+.eyebrow {
+  font-family: var(--font-ui);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 0.75em;
+  display: block;
+}
+
+.lede {
+  font-size: 1.15rem;
+  color: var(--gray);
+}
+
+/* ---------- Header / nav ---------- */
+
+.site-header {
+  background: var(--black);
+  color: var(--off-white);
+  border-bottom: 3px solid var(--navy);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.brand-mark {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.brand-text {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+.brand-text small {
+  display: block;
+  font-family: var(--font-ui);
+  font-weight: 400;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #b9b9b9;
+  margin-top: 2px;
+}
+
+nav.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+nav.main-nav a {
+  font-family: var(--font-ui);
+  color: var(--off-white);
+  text-decoration: none;
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
+  padding: 6px 2px;
+  border-bottom: 2px solid transparent;
+}
+
+nav.main-nav a:hover,
+nav.main-nav a.active {
+  border-bottom-color: var(--navy-light);
+  color: var(--white);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--off-white);
+  color: var(--off-white);
+  font-family: var(--font-ui);
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  background: var(--black);
+  color: var(--off-white);
+  padding: 88px 0 96px;
+  text-align: center;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero h1 {
+  color: var(--white);
+}
+
+.hero .lede {
+  max-width: 640px;
+  margin: 0 auto 2em;
+  color: #cfcfcf;
+}
+
+.button-row {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  padding: 14px 30px;
+  border-radius: 3px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--navy);
+  color: var(--white);
+  border-color: var(--navy);
+}
+
+.btn-primary:hover {
+  background: var(--navy-light);
+  border-color: var(--navy-light);
+  color: var(--white);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--off-white);
+  border-color: #565656;
+}
+
+.btn-outline:hover {
+  border-color: var(--off-white);
+  color: var(--white);
+}
+
+/* ---------- Sections ---------- */
+
+section {
+  padding: 80px 0;
+}
+
+section.alt {
+  background: var(--white);
+  border-top: 1px solid var(--line-light);
+  border-bottom: 1px solid var(--line-light);
+}
+
+.section-head {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 48px;
+}
+
+.section-head.left {
+  text-align: left;
+  margin-left: 0;
+}
+
+.grid {
+  display: grid;
+  gap: 32px;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 780px) {
+  .grid-3, .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--line-light);
+  border-top: 3px solid var(--navy);
+  padding: 32px 28px;
+}
+
+.card h3 {
+  margin-bottom: 0.4em;
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+/* pull-quote / motto banner */
+
+.motto {
+  background: var(--navy);
+  color: var(--white);
+  text-align: center;
+  padding: 56px 0;
+}
+
+.motto p {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.3rem, 2.6vw, 1.8rem);
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* ---------- Info table (schedule) ---------- */
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  border: 1px solid var(--line-light);
+}
+
+.info-table th,
+.info-table td {
+  text-align: left;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--line-light);
+  vertical-align: top;
+}
+
+.info-table th {
+  font-family: var(--font-ui);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--gray);
+  width: 200px;
+  background: var(--off-white);
+}
+
+.info-table tr:last-child td,
+.info-table tr:last-child th {
+  border-bottom: none;
+}
+
+.placeholder {
+  background: #fff6d8;
+  border: 1px dashed #c9a227;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-family: var(--font-ui);
+  font-size: 0.9em;
+}
+
+.notice-box {
+  background: #fff6d8;
+  border: 1px solid #c9a227;
+  border-radius: 4px;
+  padding: 20px 24px;
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  margin-bottom: 40px;
+}
+
+.notice-box strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* ---------- Resource list ---------- */
+
+.resource-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 18px;
+}
+
+.resource-list li {
+  background: var(--white);
+  border: 1px solid var(--line-light);
+  border-left: 4px solid var(--navy);
+  padding: 20px 24px;
+}
+
+.resource-list h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.25em;
+}
+
+.resource-list p {
+  margin-bottom: 0;
+  color: var(--gray);
+  font-size: 0.98rem;
+}
+
+.tag {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: var(--off-white);
+  border: 1px solid var(--line-light);
+  color: var(--navy);
+  padding: 2px 8px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+/* ---------- Dues / donation ---------- */
+
+.dues-box {
+  background: var(--white);
+  border: 1px solid var(--line-light);
+  padding: 40px;
+  text-align: center;
+}
+
+.paypal-slot {
+  margin: 28px auto 8px;
+  padding: 32px;
+  border: 2px dashed #c9a227;
+  background: #fffaf0;
+  border-radius: 6px;
+  max-width: 420px;
+  font-family: var(--font-ui);
+  color: #6b5a1e;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  background: var(--black);
+  color: #b9b9b9;
+  padding: 56px 0 32px;
+  font-family: var(--font-ui);
+  font-size: 0.92rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 700px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.site-footer h4 {
+  color: var(--white);
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 14px;
+}
+
+.site-footer a {
+  color: #b9b9b9;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: var(--white);
+}
+
+.site-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-footer li {
+  margin-bottom: 8px;
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
+  text-align: center;
+  font-size: 0.82rem;
+  color: #777;
+}
+
+/* ---------- Mobile nav ---------- */
+
+@media (max-width: 820px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  nav.main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--black);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    border-bottom: 0 solid var(--navy);
+    transition: max-height 0.25s ease;
+  }
+
+  nav.main-nav.open {
+    max-height: 320px;
+    border-bottom-width: 3px;
+  }
+
+  nav.main-nav a {
+    width: 100%;
+    padding: 14px 24px;
+    border-bottom: 1px solid var(--line);
+  }
+}
