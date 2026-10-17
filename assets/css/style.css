@@ -119,17 +119,13 @@ p { margin: 0 0 1.2em; }
 }
 
 .brand-mark {
-  width: 40px;
-  height: 40px;
-  border: 2px solid var(--white);
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.1rem;
+  background: var(--white);
+  padding: 3px;
   flex-shrink: 0;
+  object-fit: contain;
 }
 
 .brand-text {
