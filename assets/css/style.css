@@ -186,6 +186,31 @@ nav.main-nav a.active {
   border-bottom: 1px solid var(--line);
 }
 
+.hero-photo {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero-photo::before {
+  content: "";
+  position: absolute;
+  inset: -20px;
+  background-image: url("../images/hero-meeting.jpg");
+  background-size: cover;
+  background-position: center 30%;
+  filter: blur(4px) brightness(0.55);
+  z-index: -2;
+}
+
+.hero-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(11,11,12,0.55) 0%, rgba(11,11,12,0.88) 100%);
+  z-index: -1;
+}
+
 .hero h1 {
   color: var(--white);
 }
