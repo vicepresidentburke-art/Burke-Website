@@ -211,6 +211,10 @@ nav.main-nav a.active {
   z-index: -1;
 }
 
+.hero-photo .eyebrow {
+  color: #9db0d9;
+}
+
 .hero h1 {
   color: var(--white);
 }
