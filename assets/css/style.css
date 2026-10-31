@@ -13,8 +13,8 @@
   --off-white: #f6f5f2;
   --line: #23262b;
   --line-light: #e2e0da;
-  --navy: #16244a;
-  --navy-light: #2c4272;
+  --maroon: #6e1f14;
+  --maroon-light: #8c3322;
   --gray: #5c5c5c;
 
   --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
@@ -48,11 +48,11 @@ img {
 }
 
 a {
-  color: var(--navy);
+  color: var(--maroon);
 }
 
 a:hover {
-  color: var(--navy-light);
+  color: var(--maroon-light);
 }
 
 .container {
@@ -81,7 +81,7 @@ p { margin: 0 0 1.2em; }
   letter-spacing: 0.14em;
   font-size: 0.78rem;
   font-weight: 600;
-  color: var(--navy);
+  color: var(--maroon);
   margin-bottom: 0.75em;
   display: block;
 }
@@ -96,7 +96,7 @@ p { margin: 0 0 1.2em; }
 .site-header {
   background: var(--white);
   color: var(--near-black);
-  border-bottom: 3px solid var(--navy);
+  border-bottom: 3px solid var(--maroon);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -161,7 +161,7 @@ nav.main-nav a {
 
 nav.main-nav a:hover,
 nav.main-nav a.active {
-  border-bottom-color: var(--navy);
+  border-bottom-color: var(--maroon);
   color: var(--black);
 }
 
@@ -196,9 +196,9 @@ nav.main-nav a.active {
   content: "";
   position: absolute;
   inset: -20px;
-  background-image: url("../images/hero-meeting.jpg");
+  background-image: var(--hero-bg-image, url("../images/hero-meeting.jpg"));
   background-size: cover;
-  background-position: center 30%;
+  background-position: center 25%;
   filter: blur(4px) brightness(0.55);
   z-index: -2;
 }
@@ -212,7 +212,7 @@ nav.main-nav a.active {
 }
 
 .hero-photo .eyebrow {
-  color: #9db0d9;
+  color: #e3b5a8;
 }
 
 .hero h1 {
@@ -246,14 +246,14 @@ nav.main-nav a.active {
 }
 
 .btn-primary {
-  background: var(--navy);
+  background: var(--maroon);
   color: var(--white);
-  border-color: var(--navy);
+  border-color: var(--maroon);
 }
 
 .btn-primary:hover {
-  background: var(--navy-light);
-  border-color: var(--navy-light);
+  background: var(--maroon-light);
+  border-color: var(--maroon-light);
   color: var(--white);
 }
 
@@ -271,7 +271,7 @@ nav.main-nav a.active {
 /* ---------- Featured event banner ---------- */
 
 .event-banner {
-  background: var(--navy);
+  background: var(--maroon);
   color: var(--white);
   border-bottom: 1px solid var(--line);
 }
@@ -299,6 +299,10 @@ nav.main-nav a.active {
   flex-shrink: 0;
 }
 
+.event-banner .eyebrow {
+  color: #e3b5a8;
+}
+
 .event-banner h2 {
   color: var(--white);
   font-size: 1.5rem;
@@ -307,11 +311,11 @@ nav.main-nav a.active {
 
 .event-banner p {
   margin: 0;
-  color: #cfd7ea;
+  color: #e6c6bd;
 }
 
 .event-banner .btn-outline {
-  border-color: #6b7da8;
+  border-color: #a8685a;
   flex-shrink: 0;
 }
 
@@ -371,7 +375,7 @@ section.alt {
 .card {
   background: var(--white);
   border: 1px solid var(--line-light);
-  border-top: 3px solid var(--navy);
+  border-top: 3px solid var(--maroon);
   padding: 32px 28px;
 }
 
@@ -427,7 +431,7 @@ section.alt {
 /* pull-quote / motto banner */
 
 .motto {
-  background: var(--navy);
+  background: var(--maroon);
   color: var(--white);
   text-align: center;
   padding: 56px 0;
@@ -511,7 +515,7 @@ section.alt {
 .resource-list li {
   background: var(--white);
   border: 1px solid var(--line-light);
-  border-left: 4px solid var(--navy);
+  border-left: 4px solid var(--maroon);
   padding: 20px 24px;
 }
 
@@ -534,7 +538,7 @@ section.alt {
   letter-spacing: 0.06em;
   background: var(--off-white);
   border: 1px solid var(--line-light);
-  color: var(--navy);
+  color: var(--maroon);
   padding: 2px 8px;
   border-radius: 3px;
   margin-bottom: 10px;
@@ -675,7 +679,7 @@ section.alt {
 /* thumbnail placeholder used wherever an article has no image yet */
 .article-thumb {
   position: relative;
-  background: linear-gradient(135deg, var(--navy) 0%, var(--black) 100%);
+  background: linear-gradient(135deg, var(--maroon) 0%, var(--black) 100%);
   color: var(--white);
   display: flex;
   align-items: flex-end;
@@ -751,8 +755,8 @@ section.alt {
 }
 
 .carousel-arrow:hover {
-  border-color: var(--navy);
-  color: var(--navy);
+  border-color: var(--maroon);
+  color: var(--maroon);
 }
 
 .carousel-dots {
@@ -771,7 +775,7 @@ section.alt {
 }
 
 .carousel-dot.active {
-  background: var(--navy);
+  background: var(--maroon);
 }
 
 /* ---- Discipline tabs ---- */
@@ -803,8 +807,8 @@ section.alt {
 }
 
 .review-tab.active {
-  color: var(--navy);
-  border-bottom-color: var(--navy);
+  color: var(--maroon);
+  border-bottom-color: var(--maroon);
 }
 
 .article-grid {
@@ -856,7 +860,7 @@ section.alt {
 .trending-box {
   border: 1px solid var(--line-light);
   background: var(--white);
-  border-top: 3px solid var(--navy);
+  border-top: 3px solid var(--maroon);
   padding: 24px 24px 8px;
   position: sticky;
   top: 90px;
@@ -928,7 +932,7 @@ section.alt {
     gap: 0;
     max-height: 0;
     overflow: hidden;
-    border-bottom: 0 solid var(--navy);
+    border-bottom: 0 solid var(--maroon);
     transition: max-height 0.25s ease;
   }
 
