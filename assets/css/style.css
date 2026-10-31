@@ -662,6 +662,10 @@ section.alt {
   align-items: start;
 }
 
+.review-main {
+  min-width: 0;
+}
+
 @media (max-width: 900px) {
   .review-layout {
     grid-template-columns: 1fr;
@@ -691,6 +695,7 @@ section.alt {
 
 .carousel {
   position: relative;
+  min-width: 0;
   border: 1px solid var(--line-light);
   background: var(--white);
   overflow: hidden;
